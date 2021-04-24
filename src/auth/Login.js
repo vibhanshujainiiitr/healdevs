@@ -8,6 +8,12 @@ const Login = ({ history, setUser, user }) => {
       const { user } = result;
       const idTokenResult = await user.getIdTokenResult();
       setUser({ email: user.email, token: idTokenResult.token })
+      if(user.email === "pullstackdevelopers@gmail.com"){
+        history.push("/doctor")
+      }
+      else {
+        history.push("/patient")
+      }
     }).catch((err) => {
       console.log(err)
     })

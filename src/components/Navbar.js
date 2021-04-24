@@ -1,9 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Login from '../auth/Login'
 
 const Navbar = () => {
   return (
     <div>
       This is Navbar
+      <Link to="/login">
+        Login
+      </Link>
     </div>
   )
 }
