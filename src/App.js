@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router';
-import { auth } from '../firebase';
 import './App.css';
 import Login from './auth/Login';
 import Landing from './components/Landing';
+import { auth } from './firebase';
 
 const App = () => {
 
