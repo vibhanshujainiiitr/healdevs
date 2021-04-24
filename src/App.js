@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import { Route, Switch } from 'react-router';
 import './App.css';
+import Login from './auth/Login';
+import Landing from './components/Landing';
+import { auth } from './firebase';
 
-function App() {
+const App = () => {
+
+  const [user,setUser] = useState(null)
+
+  useEffect(() => {
+    const unSubscribe = auth.onAuthStateChanged(async (authUser) => {
+      if (authUser) {
+        const idTokenResult = await authUser.getIdTokenResult();
+        console.log(user);
+        setUser({ email: authUser.email, token: idTokenResult.token })
+
+      }
+    });
+    return () => unSubscribe();
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path="/" render={(props) => <Landing {...props} setUser={setUser} user={user}/>} />
+      <Route exact path="/login" render={(props) => <Login {...props} setUser={setUser} user={user}/>} />
+    </Switch>
   );
 }
 
