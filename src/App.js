@@ -6,6 +6,7 @@ import Landing from './components/Landing';
 import PatientForm from './components/PatientForm';
 import Doctor from './components/Doctor';
 import { auth } from './firebase';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
 

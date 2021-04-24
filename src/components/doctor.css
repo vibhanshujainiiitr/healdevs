@@ -1,0 +1,89 @@
+.doctor {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(161, 255, 255, 1) 11.3%,
+    rgba(6, 255, 255, 1) 41.2%,
+    rgba(0, 216, 216, 1) 77.8%
+  );
+  width: 100%;
+  height: 100%;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.doctor-box {
+  position: relative;
+  width: 80%;
+  margin: 5% 10% 5% 10%;
+  height: 250px;
+  top: calc(50% - 175px);
+  box-shadow: 5px 8px 32px 20px rgba(31, 38, 135, 0.37);
+  border-radius: 20px;
+  background-image: linear-gradient(
+    108.1deg,
+    rgb(121, 100, 241) 7.7%,
+    rgb(162, 92, 219) 38.1%,
+    rgb(98, 66, 245) 59.4%,
+    rgb(34, 90, 212) 83.5%
+  );
+  overflow: hidden;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+  cursor: pointer;
+}
+
+.doctor-box:hover {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0ba9ca, 0 0 15px #0ba9ca,
+    0 0 20px #0ba9ca, 0 0 30px #0ba9ca;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.doctor-box:after {
+  content: "";
+  width: 100%;
+  height: auto;
+  background: inherit;
+  position: absolute;
+  left: -25px;
+  right: 0;
+  top: -25px;
+  bottom: 0;
+  box-shadow: inset 0 0 100px 100px rgb(255, 255, 255);
+  filter: blur(300px);
+  box-shadow: 0 10px 10px -10px rgb(255, 255, 255);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.patient-details-box {
+  margin: 3%;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+}
+
+.doctor-heading {
+  margin-top: -10%;
+  text-align: center;
+  height: 50vh;
+  padding-top: 12%;
+  color: rgb(41, 23, 143);
+}
+
+.end {
+  height: 100px;
+}
