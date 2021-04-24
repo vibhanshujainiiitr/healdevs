@@ -1,7 +1,7 @@
 import React from 'react'
 import { auth, googleAuthProvider } from '../firebase'
 
-const Login = ({history,setUser,user}) => {
+const Login = ({ history, setUser, user }) => {
   const googleLogin = async () => {
     auth.signInWithPopup(googleAuthProvider).then(async (result) => {
       const { user } = result;
@@ -19,10 +19,22 @@ const Login = ({history,setUser,user}) => {
   }
   return (
     <div>
-      This is login page
-      <button onClick={googleLogin}>
-        Login
-      </button>
+      <div class="container-fluid login">
+        <div class="blurred-box">
+          <div class="user-login-box">
+            <div class="user-name">Login</div>
+            <button class="glass" onClick={googleLogin}>
+              Google
+          </button>
+            <button class="glass" onClick={googleLogin}>
+              Facebook
+          </button>
+            <button class="glass" onClick={googleLogin}>
+              Github
+          </button>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
