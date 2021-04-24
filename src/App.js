@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router';
 import { auth } from '../firebase';
 import './App.css';
 import Login from './auth/Login';
-import Signup from './auth/Signup';
 import Landing from './components/Landing';
 
 const App = () => {
