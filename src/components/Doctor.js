@@ -7,12 +7,16 @@ const Doctor = ({ history, user, setUser }) => {
 
   useEffect(() => {
     if (user) {
+      if (user.email !== "pullstackdevelopers@gmail.com") {
+        history.push("/")
+      }
       if (user.email === "pullstackdevelopers@gmail.com") {
         db.collection("questions").orderBy("timestamp", "desc")
           .onSnapshot((snapshot) => {
             setData(snapshot.docs.map(doc => ({
               id: doc.id,
               userData: doc.data()
+
             })))
           })
       }
