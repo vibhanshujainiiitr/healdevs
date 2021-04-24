@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './login.css';
 import { auth, googleAuthProvider } from '../firebase'
 
 const Login = ({ history, setUser, user }) => {
