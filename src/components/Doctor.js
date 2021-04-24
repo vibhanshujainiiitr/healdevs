@@ -25,14 +25,15 @@ const Doctor = ({ history, user, setUser }) => {
 
   return (
     <div>
-      <div>
-        <div><h2>This is the doctor name</h2></div>
+      <div class="container-fluid doctor">
+
+        <div className="doctor-heading"><h2>How's your patient feeling today?</h2></div>
         {
           data.map(({ userData, id }) => (
-            <div>
-              <div>
-                <p>{userData.email}</p>
-                <p>How are you feeling today?<br/>{userData.dailyDiary}</p>
+            <div class="doctor-box">
+              <div class="patient-details-box">
+                <p class="email">{userData.email}</p>
+                <p class="diary">How are you feeling today?<br />{userData.dailyDiary}</p>
               </div>
             </div>
           ))
