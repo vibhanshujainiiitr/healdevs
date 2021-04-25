@@ -58,11 +58,28 @@ const PatientForm = ({ setUser, user }) => {
               <br />
               <button className="diary-button" type="submit">
                 Submit
-        </button>
+              </button>
             </form>
           ) : (
             <h2>You have filled the form</h2>
           )}
+        </div>
+
+
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3">
+              <button className="logout-button" type="submit">
+                Logout
+              </button>
+            </div>
+            <div className="col-lg-3"></div>
+            <div className="col-lg-3">
+              <button className="logout-button" type="submit">
+                Logout
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
