@@ -71,11 +71,6 @@ const PatientForm = ({ setUser, user }) => {
           <div className="row">
             <div className="col-lg-3">
               <button className="logout-button" type="submit">
-                <Link to="/game">Game</Link>
-              </button>
-            </div>
-            <div className="col-lg-3">
-              <button className="logout-button" type="submit">
                 <Link to="../">Home</Link>
               </button>
             </div>

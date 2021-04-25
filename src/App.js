@@ -6,8 +6,6 @@ import Landing from './components/Landing';
 import PatientForm from './components/PatientForm';
 import Doctor from './components/Doctor';
 import { auth } from './firebase';
-import {game} from './components/game';
-
 
 const App = () => {
 
@@ -31,7 +29,6 @@ const App = () => {
       <Route exact path="/login" render={(props) => <Login {...props} setUser={setUser} user={user}/>} />
       <Route exact path='/patient' render={(props) => (<PatientForm {...props} setUser={setUser} user={user} />)} />
       <Route exact path="/doctor" render={(props) => (<Doctor {...props} setUser={setUser} user={user} />)} />
-      <Route exact path="/game" render={ (props) => (<game {...props} setUser={setUser} user={user} />)} />
     </Switch>
   );
 }
