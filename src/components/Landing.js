@@ -21,6 +21,15 @@ const Landing = () => {
           </div>
         </div>
       </div>
+
+      {/* Chart Part Start */}
+      <div className="graph">
+        <h2 className="graph-title">Let's Understand it through the data of Canada</h2>
+        <div class="graph-card">
+          <div className="flourish-embed flourish-chart card" data-src="visualisation/5875049"></div>
+        </div>
+      </div>
+
     </div>
   )
 }
