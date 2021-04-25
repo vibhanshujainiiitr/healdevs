@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { db } from '../firebase'
 import './doctor.css';
+import {Link} from 'react-router-dom';
+
+
+
+
 const Doctor = ({ history, user, setUser }) => {
 
   const [data, setData] = useState([]);
@@ -50,7 +55,7 @@ const Doctor = ({ history, user, setUser }) => {
             <div className="row">
               <div className="col-lg-6">
                 <button className="logout-button button-padding-doctor" type="submit">
-                  Logout
+                  <Link to="../">Home</Link>
               </button>
               </div>
               <div className="col-lg-6">
