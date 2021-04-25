@@ -25,10 +25,10 @@ const Doctor = ({ history, user, setUser }) => {
 
   return (
     <div>
-      <div class="container-fluid doctor">        
+      <div class="container-fluid doctor">
         <div class="row">
 
-        <div className="doctor-heading col-lg-12"><h1>How's your patient feeling today?</h1></div>
+          <div className="doctor-heading col-lg-12"><h1>How's your patient feeling today?</h1></div>
 
           {
             data.map(({ userData, id }) => (
@@ -43,6 +43,26 @@ const Doctor = ({ history, user, setUser }) => {
             ))
           }
         </div>
+
+        {/* Logout button */}
+        <div className="container">
+          <div className="logout-box">
+            <div className="row">
+              <div className="col-lg-6">
+                <button className="logout-button button-padding-doctor" type="submit">
+                  Logout
+              </button>
+              </div>
+              <div className="col-lg-6">
+                <button className="logout-button button-padding-doctor" type="submit">
+                  Logout
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <div className="end">
         </div>
       </div>
