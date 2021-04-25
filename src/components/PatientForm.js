@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { db } from '../firebase'
+import './patientform.css'
 
 const PatientForm = ({ setUser, user }) => {
 
@@ -46,16 +47,16 @@ const PatientForm = ({ setUser, user }) => {
 
   return (
     <div>
-      <div>
-        <div>
+      <div className="patient">
+        <div className="diary-cards">
           {formVisible ? (
             <form onSubmit={handleSubmit}>
               <p>How are you feeling today?</p>
-              <textarea onChange={(e) => setDiary(e.target.value)}>
+              <textarea class="dairy-text" onChange={(e) => setDiary(e.target.value)}>
                 {diary}
               </textarea>
               <br />
-              <button type="submit">
+              <button className="diary-button" type="submit">
                 Submit
         </button>
             </form>
