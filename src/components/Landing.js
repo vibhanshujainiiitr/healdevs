@@ -10,7 +10,6 @@ const Landing = ({history,setUser,user}) => {
   const logout = () => {
     firebase.auth().signOut();
     setUser(null);
-    history.push("/login");
   }
   return (
     <div>
