@@ -78,7 +78,7 @@ const PatientForm = ({ setUser, user }) => {
           <div className="row">
             <div className="col-lg-3">
               <button className="logout-button" type="submit">
-                <Link to="../">Home</Link>
+                <Link style={{textDecoration: "none", color: "white"}} to="../">Home</Link>
               </button>
             </div>
             <div className="col-lg-3">
