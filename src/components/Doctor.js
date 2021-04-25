@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { db } from '../firebase'
 import './doctor.css';
 import firebase from 'firebase'
+import {Link} from 'react-router-dom';
+
 const Doctor = ({ history, user, setUser }) => {
 
   const [data, setData] = useState([]);
