@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { db } from '../firebase'
 import './doctor.css';
+import firebase from 'firebase'
 import {Link} from 'react-router-dom';
-
-
-
 
 const Doctor = ({ history, user, setUser }) => {
 
   const [data, setData] = useState([]);
+
+  const logout = () => {
+    firebase.auth().signOut();
+    setUser(null);
+    history.push("/");
+  }
 
   useEffect(() => {
     if (user) {
@@ -54,13 +58,13 @@ const Doctor = ({ history, user, setUser }) => {
           <div className="logout-box">
             <div className="row">
               <div className="col-lg-6">
-                <button className="logout-button button-padding-doctor" type="submit">
-                  <Link to="../">Home</Link>
+                <button className="logout-button button-padding-doctor" type="submit" onClick={logout}>
+                  Logout
               </button>
               </div>
               <div className="col-lg-6">
-                <button className="logout-button button-padding-doctor" type="submit">
-                  Logout
+                <button className="logout-button button-padding-doctor" type="submit" onClick={() => history.push("/")}>
+                  Home
               </button>
               </div>
             </div>
