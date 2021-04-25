@@ -53,8 +53,8 @@
   transform: scale(1.1);
 }
 
-.graph{
-  height: 90vh;
+.graph {
+  height: 100vh;
 }
 .graph-title {
   text-align: center;
@@ -64,7 +64,7 @@
 }
 .flourish-chart {
   width: 80%;
-  height: 60vh;
+  height: 70vh;
   margin: 10%;
   margin-top: 6%;
   box-shadow: 4px 4px 8px 4px rgba(68, 52, 207, 0.2),

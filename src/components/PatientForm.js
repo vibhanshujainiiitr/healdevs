@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { db } from '../firebase'
 import './patientform.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const PatientForm = ({ setUser, user }) => {
 
@@ -71,10 +71,14 @@ const PatientForm = ({ setUser, user }) => {
           <div className="row">
             <div className="col-lg-3">
               <button className="logout-button" type="submit">
-              <Link to="../">Home</Link>
+                <Link to="/game">Game</Link>
               </button>
             </div>
-            <div className="col-lg-3"></div>
+            <div className="col-lg-3">
+              <button className="logout-button" type="submit">
+                <Link to="../">Home</Link>
+              </button>
+            </div>
             <div className="col-lg-3">
               <button className="logout-button" type="submit">
                 Logout

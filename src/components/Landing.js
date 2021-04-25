@@ -37,7 +37,6 @@ const Landing = ({history,setUser,user}) => {
           <div className="flourish-embed flourish-chart card" data-src="visualisation/5875049"></div>
         </div>
       </div>
-
     </div>
   )
 }
