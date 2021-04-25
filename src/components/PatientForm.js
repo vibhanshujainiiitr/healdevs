@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom'
 import { db } from '../firebase'
 import './patientform.css'
 import { Link } from 'react-router-dom'
+import firebase from 'firebase'
 
 const PatientForm = ({ setUser, user }) => {
 
@@ -10,6 +11,12 @@ const PatientForm = ({ setUser, user }) => {
   const [formVisible, setFormVisible] = useState(true);
 
   let history = useHistory()
+
+  const logout = () => {
+    firebase.auth().signOut();
+    setUser(null);
+    history.push("/");
+  }
 
   useEffect(() => {
     let date = new Date()
@@ -75,7 +82,7 @@ const PatientForm = ({ setUser, user }) => {
               </button>
             </div>
             <div className="col-lg-3">
-              <button className="logout-button" type="submit">
+              <button className="logout-button" type="submit" onClick={logout}>
                 Logout
               </button>
             </div>
